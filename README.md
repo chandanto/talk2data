@@ -25,10 +25,6 @@ This project enables users to interact with databases using natural language que
 - SQLAlchemy
 - LangChain
 - Groq LLM
-- Create a folder .streamlit under the project folder.
-- Create a file secrets.toml under the .streamlit folder.
-- Enter your Groq API key in the `secrets.toml` file.
-- Enter your database URI in the `secrets.toml` file.
 
 ## Requirements file
 requirements.txt
