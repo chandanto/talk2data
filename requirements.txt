@@ -1,0 +1,7 @@
+streamlit
+sqlalchemy
+langchain
+groq
+pandas
+langchain-groq
+transformers
