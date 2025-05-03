@@ -2,7 +2,7 @@
 ## Overview
 This project enables users to interact with databases using natural language queries, transforming them into executable SQL statements through a Generative AI model. It leverages Groq's LLM (deepseek-r1-distill-llama-70b) for SQL generation, integrated with a backend database and a frontend interface built with Streamlit.
 
-<img src="static/logo/Talk2Data.png" alt="Logo" width="370"/>
+<img src="static/logo/Talk2Data.PNG" alt="Logo" width="370"/>
 
 ## Key Features
 - Natural Language Interface: Users can input plain English questions.
