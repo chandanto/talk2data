@@ -119,6 +119,10 @@ or
 ```
 make run-debug or make run-prod
 ```
+
+## Access the App
+Open your web browser and navigate to http://localhost:8501
+
 This maps port 8501 on your host to the container and mounts the .streamlit directory for secrets.
 
 <img src="static/logo/TakePart_In_AI_logo.png" alt="Logo" width="120"/>
