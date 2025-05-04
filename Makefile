@@ -1,5 +1,5 @@
 # === VARIABLES ===
-APP_NAME=text2data
+APP_NAME=talk2data
 PORT=8501
 SECRETS_PATH=$(CURDIR)/.streamlit
 

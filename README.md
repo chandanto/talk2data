@@ -100,7 +100,7 @@ Multi-stage Alpine build to reduce image size:
 
 ## 🔧 Build Docker Image
 ``` 
-docker build -t text2data:1.0.0 -t text2data:latest .
+docker build -t talk2data:1.0.0 -t talk2data:latest .
 ```
 or
 
@@ -108,12 +108,12 @@ or
 make build-debug or make build-prod
 ```
 This tags your image as:
-- text2data:1.0.0
-- text2data:latest
+- talk2data:1.0.0
+- talk2data:latest
 
 ## Docker Run 🚀 the App
 ```
-docker run -p 8501:8501 -v .\.streamlit\:/app/.streamlit text2data:latest
+docker run -p 8501:8501 -v .\.streamlit\:/app/.streamlit talk2data:latest
 ```
 or
 ```
