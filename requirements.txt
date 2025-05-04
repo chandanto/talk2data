@@ -4,4 +4,4 @@ langchain
 groq
 pandas
 langchain-groq
-transformers
+# transformers

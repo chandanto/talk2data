@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, MetaData, text
 from langchain_groq import ChatGroq # Import the ChatGroq class from the langchain_groq module
 from langchain.schema import HumanMessage, AIMessage, SystemMessage 
 import re
-from transformers import AutoTokenizer
+# from transformers import AutoTokenizer
 from pathlib import Path
 import base64
 

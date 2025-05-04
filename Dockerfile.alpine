@@ -1,0 +1,58 @@
+# ---- Stage 1: Build & Install dependencies ----
+FROM python:3.13-alpine AS builder
+
+# Set working directory
+WORKDIR /install
+
+# System packages needed to build dependencies
+RUN apk add --no-cache \
+    build-base \
+    gcc \
+    musl-dev \
+    libffi-dev \
+    openssl-dev \
+    git \
+    jpeg-dev \
+    zlib-dev \
+    sqlite-dev \
+    bash \
+    curl
+
+# Install dependencies into /install/packages
+COPY requirements.txt .
+RUN pip install --upgrade pip \
+    && pip install --no-cache-dir --prefix=/install/packages -r requirements.txt
+
+# ---- Stage 2: Final runtime image ----
+FROM python:3.13-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Only keep runtime libraries
+RUN apk add --no-cache \
+    libffi \
+    openssl \
+    sqlite \
+    jpeg \
+    zlib \
+    bash \
+    curl
+
+# Copy installed Python packages from builder
+COPY --from=builder /install/packages /usr/local
+
+# Copy app source code
+COPY . .
+
+# Clean pycache (just in case)
+RUN find . -type d -name "__pycache__" -exec rm -r {} +
+
+# Pre-initialize DB
+RUN python init_multiple_tables_db.py
+
+# Expose Streamlit port
+EXPOSE 8501
+
+# Launch app
+CMD ["python", "-m", "streamlit", "run", "app_streamlite_ui.py", "--server.port=8501", "--server.address=0.0.0.0"]

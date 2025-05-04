@@ -25,6 +25,8 @@ This project enables users to interact with databases using natural language que
 - SQLAlchemy
 - LangChain
 - Groq LLM
+- Docker (Alpine-based, minimal size)
+- make 
 
 ## Requirements file
 requirements.txt
@@ -87,5 +89,36 @@ shop.sql
 ```
 python -m streamlit run app_streamlite_ui.py
 ```
+
+## 🐳 Docker Usage and Makefile
+## 📦 Dockerfile Overview
+Multi-stage Alpine build to reduce image size:
+- Stage 1: Build + install dependencies
+- Stage 2: Minimal runtime with only required libs
+- Uses external .streamlit/secrets.toml via volume mount
+
+
+## 🔧 Build Docker Image
+``` 
+docker build -t text2data:1.0.0 -t text2data:latest .
+```
+or
+
+```
+make build-debug or make build-prod
+```
+This tags your image as:
+- text2data:1.0.0
+- text2data:latest
+
+## Docker Run 🚀 the App
+```
+docker run -p 8501:8501 -v .\.streamlit\:/app/.streamlit text2data:latest
+```
+or
+```
+make run-debug or make run-prod
+```
+This maps port 8501 on your host to the container and mounts the .streamlit directory for secrets.
 
 <img src="static/logo/TakePart_In_AI_logo.png" alt="Logo" width="120"/>
