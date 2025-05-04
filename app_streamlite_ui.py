@@ -56,9 +56,9 @@ st.markdown("""
 
 Here are some example questions you can try:
 
-- `What is the total sales for each product category with product names?`
-- `What is the total sales for each product category in January 2020?`
-- `Show total amount spent by each customer.`
+- `What is the total sales for each products category with products names?`
+- `What is the total sales for each products category in January 2020?`
+- `Show total amount spent by each customers.`
 - `Show total amount spent by each customer in the year 2020.`
 """)  
 
