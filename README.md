@@ -33,6 +33,8 @@ This project talk more on transforming them into executable SQL statements throu
 <img src="static/logo/Talk2Data.PNG" alt="Logo" width="370"/>
 
 ## Project - rag_text2sql
+An AI-powered assistant for construction professionals that combines building regulations (PDFs) and material specifications (CSV/SQL) using RAG architecture.
+
 This project talk Create an AI assistant for construction professionals that combines:
 - Building Codes/Regulations (PDF documents)
 - Material Specifications (CSV/SQL data)

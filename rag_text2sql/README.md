@@ -1,6 +1,10 @@
 ##  GenAI-Powered Text-to-SQL Application
 ## Overview
-This project enables users to interact with databases using natural language queries. 
+This project enables users to interact with databases using natural language queries.
+An AI-powered assistant for construction professionals that combines building regulations (PDFs) and material specifications (CSV/SQL) using RAG architecture.
+
+## High Level
+<img src="static/logo/High_Level_Flow.png" alt="Logo" width="450"/>
 
 ## Key Features
 - Multi-source RAG:
@@ -21,7 +25,7 @@ This project enables users to interact with databases using natural language que
 - LLM Integration: Groq's ChatGroq class
 - Tokenizer: Hugging Face's transformers library for token counting
 
-## Project - rag_text2sql
+## Project - rag_text2sql - Construction Knowledge Assistant
 This project talk Create an AI assistant for construction professionals that combines:
 - Building Codes/Regulations (PDF documents)
 - Material Specifications (CSV/SQL data)
@@ -36,6 +40,24 @@ This project talk Create an AI assistant for construction professionals that com
 - Combine insights from both sources
 - Handle complex questions like:
     - "What's the fire rating requirement for steel beams in high-rises, and show compliant materials under $50/kg?"*
+
+## Features
+
+- **Hybrid Knowledge Base**
+  - PDF document processing (building codes, safety regulations)
+  - CSV data integration (material specs, pricing)
+  - SQL database for order history/analytics
+
+- **Advanced Query Handling**
+  - Natural language questions
+  - Combined PDF+CSV queries
+  - Automatic source routing
+
+- **Tech Stack**
+  - RAG Architecture
+  - Groq API (Llama-70B) for reasoning
+  - FAISS vector search
+  - Streamlit frontend
 
 ## End-to-End Workflow with Example
 ## User Query:
