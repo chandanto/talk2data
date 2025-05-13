@@ -1,0 +1,16 @@
+# Clean environment setup (recommended)
+python -m venv rag_env
+source rag_env/bin/activate  # Linux/Mac
+# rag_env\Scripts\activate  # Windows
+
+# Install these EXACT versions
+# pip install \
+#     langchain-core==0.1.40 \
+#     langchain-community==0.0.29 \
+#     langchain-groq==0.1.1 \
+#     sqlalchemy==2.0.25 \
+#     streamlit==1.29.0 \
+#     faiss-cpu==1.7.4 \
+#     sentence-transformers==2.2.2 \
+#     pypdf2==3.0.1 \
+#     python-dotenv==1.0.0
