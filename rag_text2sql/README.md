@@ -23,6 +23,7 @@ An AI-powered assistant for construction professionals that combines building re
 - Frontend: Streamlit
 - Database: SQLite (or any other supported by SQLAlchemy)
 - LLM Integration: Groq's ChatGroq class
+- Embedding: Using LLM (OpenAI - text-embedding-3-small), To chunks text and store on FAISS vector database.
 - Tokenizer: Hugging Face's transformers library for token counting
 
 ## Project - rag_text2sql - Construction Knowledge Assistant
